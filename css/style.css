@@ -192,6 +192,10 @@ header .container {
   margin: auto;
 }
 
+.show {
+  display: none;
+}
+
 header h3 span {
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -220,7 +224,7 @@ header h3 span {
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 660px) {
   header h1 {
     font-size: 6rem;
   }
@@ -243,6 +247,14 @@ header h3 span {
 
   .cta-container {
     width: 60%;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .btn-cta {
+    margin-top: 1em;
   }
 }
 
@@ -291,13 +303,16 @@ header h3 span {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .gallery a {
+    display: flex;
+  }
+
   .gallery a:nth-child(5),
   .gallery a:nth-child(6) {
     display: block;
   }
 
   .gallery a:first-of-type {
-    display: flex;
     order: -1;
     grid-column: span 2;
     grid-row: span 2;
