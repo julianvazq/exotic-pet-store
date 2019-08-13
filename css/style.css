@@ -1,0 +1,307 @@
+:root {
+  --primary-color: #a9b009;
+  /* font-family: 'Kaushan Script', cursive; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styling */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+/* Typography */
+
+nav {
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: white;
+  transition: color 200ms ease-in;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--primary-color);
+}
+
+.logo {
+  font-family: "Kaushan Script", cursive;
+  position: relative;
+  font-size: 2.5rem;
+  padding: 0 0.4em 0 0.2em;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.logo::before,
+.logo::after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  display: inline-block;
+  background: black;
+  bottom: 47%;
+  position: absolute;
+}
+
+body {
+  font-family: "DM Serif Text", serif;
+  line-height: 1.4;
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 4rem;
+}
+header h2 {
+  font-size: 2rem;
+  margin: 0.5em;
+  color: var(--primary-color);
+}
+
+.btn-cta {
+  font-family: "Kaushan Script", cursive;
+}
+
+header h3 {
+  font-size: 1.4rem;
+  margin: 1em;
+  line-height: 1.8;
+}
+
+/* Utilities */
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 0.1em 0.2em;
+  border: 2px solid white;
+  text-align: center;
+}
+
+/* -------Nav----------- 
+----------------------*/
+nav {
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 0.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2em;
+  max-width: 250px;
+}
+
+nav li {
+  padding: 0.3em;
+}
+
+@media only screen and (min-width: 400px) {
+  nav ul {
+    max-width: none;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  nav {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  nav {
+    font-size: 2rem;
+  }
+}
+
+/* -------Main----------- 
+----------------------*/
+
+/* -------Header----------- 
+----------------------*/
+header {
+  height: 90vh;
+  background-image: url(../images/jungle-trail.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 4em;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header .container {
+  position: relative;
+  top: 20%;
+}
+
+.cta-container {
+  width: 80%;
+  margin: auto;
+}
+
+header h3 span {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.2em;
+}
+
+.btn-cta {
+  font-family: "Kaushan Script", cursive;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0 1.3em 0 1em;
+  margin-top: 0.2em;
+  transition: background 300ms ease-in;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-color);
+  color: black;
+  border-color: black;
+}
+
+@media only screen and (min-width: 460px) {
+  header h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  header h1 {
+    font-size: 6rem;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  header {
+    height: 100vh;
+  }
+  header h1 {
+    font-size: 5em;
+  }
+
+  header h2 {
+    font-size: 2.5em;
+  }
+
+  .cta-container {
+    width: 60%;
+  }
+}
+
+/* -------Gallery----------- 
+----------------------*/
+/* Hide 3 images on small screens */
+.gallery a:nth-child(2),
+.gallery a:nth-child(5),
+.gallery a:nth-child(6) {
+  display: none;
+}
+
+.gallery a {
+  display: flex;
+  transition: 300ms ease-in;
+  position: relative;
+  filter: brightness(0.5);
+  transition: filter 450ms ease-in, transform 450ms ease-in;
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    inset 1px 0px 27px 5px rgba(0, 0, 0, 0);
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+  z-index: 5;
+}
+
+.gallery a:hover img {
+  box-shadow: inset 2px -3px 61px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (min-width: 600px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery a:nth-child(2) {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery a:nth-child(5),
+  .gallery a:nth-child(6) {
+    display: flex;
+  }
+
+  .gallery a:first-of-type {
+    order: -1;
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
