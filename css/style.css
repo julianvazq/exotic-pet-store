@@ -297,6 +297,7 @@ header h3 span {
   }
 
   .gallery a:first-of-type {
+    display: flex;
     order: -1;
     grid-column: span 2;
     grid-row: span 2;
