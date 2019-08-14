@@ -2,6 +2,10 @@
   --primary-color: #a9b009;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -120,6 +124,10 @@ footer {
   font-size: 1.5rem;
 }
 
+footer p {
+  font-family: "Kaushan Script", cursive;
+}
+
 /* Utilities */
 
 .btn {
@@ -236,7 +244,7 @@ header .container {
 header h3 span {
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 0.2em;
+  padding: 0.2em 0.3em;
 }
 
 .btn-cta {
@@ -463,6 +471,7 @@ header h3 span {
   .stats-flex {
     grid-column: 1;
     grid-row: 1;
+    margin-top: 2.8em;
   }
 
   .services {
@@ -470,6 +479,7 @@ header h3 span {
     justify-content: start;
     grid-column: 2;
     grid-row: 1;
+    margin-top: 3.5em;
   }
 
   .disclaimer {
@@ -490,6 +500,7 @@ header h3 span {
     grid-column: 1;
     position: relative;
     font-size: 1.3rem;
+    margin-top: 0;
   }
 
   .stats-flex::after {
@@ -505,6 +516,7 @@ header h3 span {
   .services {
     grid-column: 3;
     font-size: 1.3rem;
+    margin-top: 0;
   }
 
   .services::before {
@@ -530,9 +542,12 @@ header h3 span {
 /* -------Footer----------- 
 ----------------------*/
 footer {
-  background: black;
-  color: white;
-  padding: 2em 0.5em;
+  background: var(--primary-color);
+  padding: 2em 0.5em 1em 0.5em;
+}
+
+footer a {
+  color: black;
 }
 
 footer ul:first-of-type {
@@ -553,6 +568,11 @@ footer ul:first-of-type {
 footer a:hover,
 footer a:focus {
   opacity: 0.7;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 2em;
 }
 
 @media only screen and (min-width: 500px) {
