@@ -145,7 +145,7 @@ footer p {
   border-color: black;
   width: 100%;
   padding: 0.5em 0.8em;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .btn-services:hover,
@@ -388,7 +388,7 @@ header h3 span {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 6;
 }
 
@@ -397,6 +397,7 @@ header h3 span {
 
 /* Stats */
 .stats-flex {
+  padding: 3em 0;
   text-align: center;
   position: relative;
   z-index: 9;
@@ -423,8 +424,8 @@ header h3 span {
 
 /* Services */
 .services {
-  margin: 1em 0;
-  display: flex;
+  margin-bottom: 3em;
+  /* display: flex; */
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
@@ -433,16 +434,20 @@ header h3 span {
 }
 
 .services > div {
-  padding: 1.5em 0;
+  padding: 0 0 1.5em 0;
+  width: 50%;
+  margin: auto;
 }
 
-/* .pet-food {
-  transform: translateY(-20%);
+.services::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  top: -10%;
+  left: 10%;
 }
-
-.grooming {
-  transform: translateY(-10%);
-} */
 
 /* Disclaimer */
 .disclaimer {
@@ -472,14 +477,27 @@ header h3 span {
     grid-column: 1;
     grid-row: 1;
     margin-top: 2.8em;
+    padding: 0;
   }
 
   .services {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     grid-column: 2;
     grid-row: 1;
     margin-top: 3.5em;
+  }
+
+  .services::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    right: 100%;
+    left: 0;
   }
 
   .disclaimer {
@@ -501,22 +519,24 @@ header h3 span {
     position: relative;
     font-size: 1.3rem;
     margin-top: 0;
+    height: 80%;
   }
 
   .stats-flex::after {
     content: "";
     position: absolute;
     width: 2px;
-    height: 90%;
+    height: 100%;
     background-color: white;
-    top: 5%;
+    top: 0%;
     left: 90%;
   }
 
   .services {
     grid-column: 3;
-    font-size: 1.3rem;
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    height: 80%;
   }
 
   .services::before {
@@ -527,7 +547,16 @@ header h3 span {
     background-color: white;
     top: 0;
     right: 90%;
+    left: 10%;
   }
+
+  /* .pet-food {
+    transform: translateY(-20%);
+  }
+
+  .grooming {
+    transform: translateY(-10%);
+  } */
 
   .btn-services {
     font-size: 1.5rem;
