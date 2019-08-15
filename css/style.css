@@ -268,15 +268,6 @@ header h3 span {
   }
 }
 
-@media only screen and (min-width: 660px) {
-  header h1 {
-    font-size: 6rem;
-  }
-  header h2 {
-    font-size: 3rem;
-  }
-}
-
 @media only screen and (min-width: 775px) {
   header {
     height: 100vh;
@@ -299,6 +290,15 @@ header h3 span {
 
   .btn-cta {
     margin-top: 1em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header h1 {
+    font-size: 6rem;
+  }
+  header h2 {
+    font-size: 3rem;
   }
 }
 
