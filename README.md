@@ -14,5 +14,5 @@
 * Exotic animal themed photo gallery
 
 ## Acknowledgments
-*[Simple Lightbox](https://simplelightbox.com/) - for allowing me to not have to reinvent the wheel
+[Simple Lightbox](https://simplelightbox.com/) - for allowing me to not have to reinvent the wheel
 
