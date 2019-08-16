@@ -7,7 +7,7 @@
   * Flexbox
   * Grid
 * JavaScript
-  *Lightbox photo gallery
+  * Lightbox photo gallery
 
 ## Features
 * Responsive design 
